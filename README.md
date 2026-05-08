@@ -18,3 +18,17 @@ De la nave nos interesa averiguar:
 Y también hay hechos que le suceden a la nave
 * Cuando la nave choca, todos sus pasajeros saltan para salvarse y se van de la nave. 
 * Cuando la nave acelera, todos sus pasajeros, excepto el elegido, saltan de alegría y permanecen en la nave.	
+
+Más requerimientos Se debe poder:
+
+1- Conocer a los "pasajeros valiosos", que son aquellos cuya vitalidad es superior a 5.
+2- Saber si hay algún pasajero que esté "al horno", lo cual ocurre si su vitalidad es exactamente 0.
+3- Averiguar si todos los pasajeros de la nave están en condiciones de enfrentar a un agente, algo que solo sucede si cada uno tiene más de 2 de vitalidad.
+4- Obtener la vitalidad promedio de los pasajeros que están actualmente en la nave.
+5- Conocer cuántos pasajeros tienen una vitalidad que sea un número par.
+6- Hacer que la nave realice un "simulacro de combate", lo que obliga a todos sus pasajeros a saltar tres veces seguidas.
+7- Listar la vitalidad de todos los pasajeros.
+8- Ordenar a los pasajeros de menor a mayor según su vitalidad.
+9- Elegir al azar un pasajero para que limpie el baño.
+10- Contar la cantidad de pasajeros a bordo de la nave que son 'El elegido'.
+11- La nave debe poder responder cuál es su potencia vital, cuyo valor es el producto de la vitalidad de sus pasajeros.

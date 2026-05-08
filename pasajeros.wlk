@@ -1,4 +1,3 @@
-import semana2.Bolichito-TP.bolichito-aguscasla.bolichito.*
 object neo {
     var energia = 100
 
@@ -61,4 +60,46 @@ object nave {
     }
 
     method pasajeros() = pasajeros
+
+    method pasajerosValiosos() {
+        return pasajeros.filter({pas => pas.vitalidad() > 5})
+    }
+    method hayPasajeroSinVitalidad() {
+        return pasajeros.any({pas => pas.vitalidad() == 0})
+    }
+    method losPasajerosPuedenEnfrentarAUnAgente() {
+        return pasajeros.all({pas => pas.vitalidad() >= 2})
+    }
+    method vitalidadTotal() {
+        return self.vitalidadDeLosPasajeros().sum()
+    }
+    method vitalidadPromedio() {
+        return  self.vitalidadTotal() / self.cuantosPasajerosHay()
+    }
+    method cuantosPasajerosTienenVitalidadPar() {
+        return pasajeros.count({pas => pas.vitalidad().even()})
+    }
+    method saltarTodos() {
+        pasajeros.forEach({pas => pas.saltar()})
+    }
+    method simulacroCombate() {
+        pasajeros.forEach({pas => pas.saltar() pas.saltar() pas.saltar()})
+    }
+    method vitalidadDeLosPasajeros() {
+        return pasajeros.map({pas => pas.vitalidad()})
+    }
+    method ordenarPasajeros() {
+        return pasajeros.sortBy({a, b => a.vitalidad() < b.vitalidad()})
+    }
+    method pasajeroParaLimpiar() {
+        return pasajeros.anyOne()
+    }
+    method elegidosEnLaNave() {
+        return pasajeros.count({pas => pas.esElElegido()})
+    }
+    method potenciaDeLaVitalidad() {
+        var potencia = 1
+        pasajeros.forEach({pas => potencia *= pas.vitalidad()})
+        return potencia
+    }
 }

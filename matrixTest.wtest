@@ -1,3 +1,4 @@
+import pasajeros.*
 
 
 describe "group of tests " {
@@ -5,5 +6,13 @@ describe "group of tests " {
   test "test 01" {
     assert.equals(100, 50+50)
   }
-
+  test "test 02" {
+    assert.equals(6, nave.vitalidadPromedio())
+  }
+  test "test 03" {
+    assert.equals(3, nave.cuantosPasajerosTienenVitalidadPar())
+  }
+  test "test 04" {
+    a
+  }
 }
